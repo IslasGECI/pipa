@@ -11,7 +11,6 @@ def test_add_offset():
 
 
 def test_repo_init(mocker):
-    mocker.patch('os.system')
+    mocker.patch("os.system")
     dt.repo_init()
-    os.system.assert_called_once_with('template in GitHub')
-
+    os.system.assert_called_once_with("template in GitHub")
