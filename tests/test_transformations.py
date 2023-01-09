@@ -1,3 +1,4 @@
+import os
 import pipa as dt
 
 
@@ -10,7 +11,7 @@ def test_add_offset():
 
 
 def test_repo_init(mocker):
-    mocker.patch('os.remove')
-    dt.repo_init("new_repo")
+    mocker.patch('os.system')
+    dt.repo_init()
     os.system.assert_called_once_with('template in GitHub')
 
