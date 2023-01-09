@@ -9,4 +9,5 @@ RUN pip install --upgrade pip && pip install \
     mypy \
     pylint \
     pytest \
+    pytest-mock \
     pytest-cov
