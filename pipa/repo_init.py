@@ -6,8 +6,12 @@ def repo_init() -> None:
 
 
 def change_module_name_in_makefile() -> None:
-    os.system("sed --in-place 's/dummy_transformations/pipa/' Makefile")
+    change_module_name_in_file("Makefile")
 
 
 def change_module_name_in_pyproject() -> None:
-    os.system("sed --in-place 's/dummy_transformations/pipa/' pyproject.toml")
+    change_module_name_in_file("pyproject.toml")
+
+
+def change_module_name_in_file(filename: str) -> None:
+    os.system(f"sed --in-place 's/dummy_transformations/pipa/' {filename}")
