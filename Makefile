@@ -13,7 +13,7 @@ all: check coverage mutants
 		setup \
 		tests
 
-module = pipa
+module = geci_pipa
 codecov_token = 4824525f-4eec-4294-a8f3-dcdb1f297ffa
 
 define lint
