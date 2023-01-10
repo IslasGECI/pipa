@@ -13,5 +13,9 @@ def change_module_name_in_pyproject() -> None:
     change_module_name_in_file("pyproject.toml")
 
 
+def change_module_name_in_actions() -> None:
+    change_module_name_in_file(".github/workflows/develop.yml")
+
+
 def change_module_name_in_file(filename: str) -> None:
     os.system(f"sed --in-place 's/dummy_transformations/pipa/' {filename}")
