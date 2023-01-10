@@ -13,6 +13,10 @@ def change_module_name_in_pyproject() -> None:
     change_module_name_in_file("pyproject.toml")
 
 
+def change_module_name_in_tests() -> None:
+    change_module_name_in_file("tests/test_transformations.py")
+
+
 def change_module_name_in_actions() -> None:
     change_module_name_in_file(".github/workflows/develop.yml")
 
