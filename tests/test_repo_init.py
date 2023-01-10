@@ -1,5 +1,5 @@
 import os
-import pipa as pp
+import geci_pipa as pp
 
 
 def test_repo_init(mocker):
