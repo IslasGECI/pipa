@@ -8,7 +8,7 @@ def test_repo_init(mocker):
     os.system.assert_called_once_with("template in GitHub")
 
 
-def test_modele_name_in_files(mocker) -> None:
+def test_modele_name_in_files(mocker):
     mocker.patch("os.system")
     pp.change_module_name_in_makefile()
     assert_called_os_system_with_file("Makefile")
@@ -20,5 +20,6 @@ def test_modele_name_in_files(mocker) -> None:
     assert_called_os_system_with_file(".github/workflows/develop.yml")
 
 
-def assert_called_os_system_with_file(file_name: str) -> None:
-    os.system.assert_called_with(f"sed --in-place 's/dummy_transformations/pipa/' {file_name}")
+def assert_called_os_system_with_file(file_name):
+    command = f"sed --in-place 's/dummy_transformations/pipa/' {file_name}"
+    os.system.assert_called_with(command)
