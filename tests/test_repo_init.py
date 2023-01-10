@@ -14,6 +14,8 @@ def test_modele_name_in_files(mocker) -> None:
     assert_called_os_system_with_file("Makefile")
     pp.change_module_name_in_pyproject()
     assert_called_os_system_with_file("pyproject.toml")
+    pp.change_module_name_in_tests()
+    assert_called_os_system_with_file("tests/test_transformations.py")
     pp.change_module_name_in_actions()
     assert_called_os_system_with_file(".github/workflows/develop.yml")
 
